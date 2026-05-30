@@ -4,7 +4,7 @@ import os
 # === CONFIGURATION ===
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
-MIN_PROFIT_PCT = 2.0  # Minimal selisih harga 2% baru kirim notif
+MIN_PROFIT_PCT = 0.01  # Minimal selisih harga 2% baru kirim notif
 
 def send_telegram(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
