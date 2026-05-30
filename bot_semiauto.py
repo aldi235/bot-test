@@ -1,9 +1,9 @@
 import time
 import requests
-
+import os
 # === CONFIGURATION ===
-TELEGRAM_TOKEN = "8837609908:AAEd64fiTgswO4bXNTxXIZ13unXEO92Dhe0"
-CHAT_ID = "6516395346"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
 MIN_PROFIT_PCT = 2.0  # Minimal selisih harga 2% baru kirim notif
 
 def send_telegram(message):
